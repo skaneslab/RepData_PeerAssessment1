@@ -93,7 +93,6 @@ hist(totalsteps,
 ```
 
 ![plot of chunk unnamed-chunk-4](Figs/unnamed-chunk-4-1.png)
-
 ## **QUESTION 3: Mean and median number of steps taken each day**
 
 ```r
