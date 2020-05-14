@@ -4,6 +4,11 @@ author: "Ali CHAOUCHE"
 date: "5/13/2020"
 ---
 
+    
+    ```{r global_options}
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+    
 ```{r, echo = TRUE,include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -11,7 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 # **Peer-graded Assignment Course Project 1**
 
 ```{r results='hide', echo = TRUE,message=FALSE, warning=FALSE}
-setwd("C:/Users/User/Documents/DATA SCIENCES SPECIALIZATION/5. REPRODUCIBLE RESEARCH/RepData_PeerAssessment1")
 
 # Install R libraries
 library(data.table)
@@ -37,7 +41,7 @@ Calculate the total number of steps taken per day
 If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
 Calculate and report the mean and median of the total number of steps taken per day
 
-```{r echo = TRUE,}
+```{r}
 # Calculate the total number of steps taken per day
 totalsteps <- with(activity, tapply(activity$steps, as.factor(activity$date), sum, na.rm = T))
 # plot histogram
