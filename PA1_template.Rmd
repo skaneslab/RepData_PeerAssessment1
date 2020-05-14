@@ -8,7 +8,7 @@ output: html_document
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# **Reproducible Research Course**
+# **Reproducible Research Coursera**
 # **Peer-graded Assignment Course Project 1**
 
 ```{r results='hide', message=FALSE, warning=FALSE}
