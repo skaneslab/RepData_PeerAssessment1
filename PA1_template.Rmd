@@ -147,5 +147,6 @@ qplot(interval,
         facet_wrap(~ type_of_day, ncol = 1)
 ```
 
-
-knitr::knit("PA1_template.Rmd")
+output: 
+  html_document: 
+    keep_md: true 
