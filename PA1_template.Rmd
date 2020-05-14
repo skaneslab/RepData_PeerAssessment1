@@ -3,14 +3,10 @@ title: "PA1_template"
 author: "Ali CHAOUCHE"
 date: "5/13/2020"
 output:
-  word_document: default
   html_document: default
+  word_document: default
 ---
-output: 
-  html_document:
-    keep_md: true
-    
-rmarkdown::render(  input = 'file.RMD' , output_file = 'file.md', output_format=   md_document( ) )  
+
 ```{r, echo = TRUE,include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -150,3 +146,6 @@ qplot(interval,
       main = "") +
         facet_wrap(~ type_of_day, ncol = 1)
 ```
+
+
+knitr::knit("PA1_template.Rmd")
