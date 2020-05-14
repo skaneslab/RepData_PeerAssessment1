@@ -10,8 +10,6 @@ date: "5/13/2020"
 
 
 ```r
-setwd("C:/Users/User/Documents/0. KUALA LUMPUR/20. THRIVE/Maths for DataSciences/DATA SCIENCES SPECIALIZATION/5. REPRODUCIBLE RESEARCH/RepData_PeerAssessment1")
-
 # Install R libraries
 library(data.table)
 library(dplyr)
