@@ -3,13 +3,12 @@ title: "PA1_template"
 author: "Ali CHAOUCHE"
 date: "5/13/2020"
 ---
-itle: "Reproducible Research: Peer Assessment 1"
 
-output: 
-
-  html_document:
-
-    keep_md: true
+    
+    
+    ```r
+    knitr::opts_chunk$set(fig.path='Figs/')
+    ```
     
 
 # **Reproducible Research Coursera**
@@ -80,7 +79,20 @@ Calculate the total number of steps taken per day
 If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
 Calculate and report the mean and median of the total number of steps taken per day
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+
+```r
+# Calculate the total number of steps taken per day
+totalsteps <- with(activity, tapply(activity$steps, as.factor(activity$date), sum, na.rm = T))
+# plot histogram
+hist(totalsteps,
+     main="Plot 1: Histogram of the total number of steps taken each day",
+     xlab="Total number of steps",
+     ylim=c(0,20),
+     col="grey", breaks=10,
+     freq=TRUE)
+```
+
+![plot of chunk unnamed-chunk-4](Figs/unnamed-chunk-4-1.png)
 
 ## **QUESTION 3: Mean and median number of steps taken each day**
 
@@ -116,7 +128,7 @@ type="l",
 col="black")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-6](Figs/unnamed-chunk-6-1.png)
 
 ## **QUESTION 5: The 5-minute interval that, on average, contains the maximum number of steps**
 
@@ -174,7 +186,7 @@ hist(totalimpute,
      freq=TRUE)
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](Figs/unnamed-chunk-12-1.png)
 
 
 Do these values differ from the estimates from the first part of the assignment ? 
@@ -218,4 +230,4 @@ qplot(interval,
         facet_wrap(~ type_of_day, ncol = 1)
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
+![plot of chunk unnamed-chunk-15](Figs/unnamed-chunk-15-1.png)
