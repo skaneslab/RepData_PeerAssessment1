@@ -2,9 +2,15 @@
 title: "PA1_template"
 author: "Ali CHAOUCHE"
 date: "5/13/2020"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
-
+output: 
+  html_document:
+    keep_md: true
+    
+rmarkdown::render(  input = 'file.RMD' , output_file = 'file.md', output_format=   md_document( ) )  
 ```{r, echo = TRUE,include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
